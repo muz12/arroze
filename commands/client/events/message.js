@@ -15,12 +15,11 @@ module.exports = async ( message) => {
             if(user){
         var prefix;
         prefix = server.prefix
-
+        console.log(GetMention(client.user.id), message.content)    
         if(message.content.match(GetMention(client.user.id))) {
             message.channel.send(
-                `Olá ${message.author} o meu prefixo é **${prefix}**.`
-            );
-            console.log("a")
+                `Olá ${message.author} o meu prefixo é ${prefix}`
+            )
 }
             if(message.content.indexOf(prefix) !== 0) return;
             let messageArray = message.content.split(" ");
@@ -30,14 +29,15 @@ module.exports = async ( message) => {
                 client.commands.get(cmd.slice(prefix.length)) || 
                 client.commands.get(client.aliases.get(cmd.slice(prefix.length)));
                 
+                
                 if(cmdFile) {
-                    return cmdFile.run(client, message, agrs)
+                    return cmdFile.run(client, message, args)
                 }
             } else {
-                User.create({_id:message.author.id})
+                Guild.create({_id:message.guild.id})
             }
             } else {
-                Guild.create({_id: message.guild.id})
+                User.create({_id: message.author.id})
             }
         })
     })

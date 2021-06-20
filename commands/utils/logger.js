@@ -2,12 +2,14 @@ const moment = require ("moment")
 
 module.exports = {
     async sucess(content) {
-        console.log(`[${moment().format("DD-MM-YYYY HH:mm")}- ✅sucesso]` + content )
+        console.log(`[${moment().format("DD-MM-YYYY HH:mm")}- ✅sucesso] ` + content )
     },
     async error(content) {
-        console.log(`[${moment().format("DD-MM-YYYY HH:mm")}- ❌Erro]` + content )
+        console.log(`[${moment().format("DD-MM-YYYY HH:mm")}- ❌Erro] ` + content )
     },
     async warn(content) {
-        console.log(`[${moment().format("DD-MM-YYYY HH:mm")}- ⚠️Aviso]` + content )
+        console.log(`[${moment().format("DD-MM-YYYY HH:mm")}- ⚠️Aviso] ` + content )
     }
 }
+
+

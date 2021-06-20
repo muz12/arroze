@@ -17,7 +17,7 @@ module.exports.run = async (client, message, args) => {
         
      
         let embed = new Discord.MessageEmbed()
-        .setColor("RAMDOM")
+        .setColor("35FF00")
         .setTitle("__**Informações do bot**__")
         .addField("<:pen:829093580719128648>Creador do bot:", "Gomezzz#9093")
         .addField("<:ram:829092926868291594>Ram utilizada ", `${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)} / ${(os.totalmem() / 1024 / 1024).toFixed(2)} MB`,true)
@@ -25,13 +25,13 @@ module.exports.run = async (client, message, args) => {
         .addField("<:membro:829094904868372490>Membros: ", `${client.users.cache.size.toLocaleString()}`, true)
         .addField("<:verificacaodoservidor:829095347589611601>Servidores: ", `${client.guilds.cache.size.toLocaleString()}`, true)
         .addField("<:logosquare:829096767517753394>Discord.js ", `v${version}`, true)
-        .addField("<:download:829096954930659368>Node ", `${process.version}`, true)
+        .addField("<:nodejs:831575962504003614>Node ", `${process.version}`, true)
         .addField("<:cpu:829097225652142090>CPU ", `\`\`\`md\n${os.cpus().map(i => `${i.model}`)[0]}\`\`\``)
         .addField("<:2493301:829097408985038849>Utilização do CPU ", `\`${percent.toFixed(2)}%\``, true)
         .addField("<:cpu1:829097666704441364>Bits", `\`${os.arch()}\``, true)
-        .addField("<:plataformadepetroleo:829098756271505438>Plataforma", `\`\`${os.platform()}\`\``, true)
-        .addField("<:javascript1:829072392688238592> Linguagem do bot :", "Javascript")
-        .addField("Meu servidor:", `[Meu convite](https://discord.gg/f3qBM7d)`, true)
+        .addField("<:plataformadepetroleo:829098756271505438>Plataforma", `\`\`\`${os.platform()}\`\`\``, true)
+        .addField("<:JavaScript:837704836472504330>Linguagem do bot :", "Javascript")
+        .addField("Meu servidor:", `[Meu convite](https://discord.gg/f3qBM7d)\n [Paypal](https://paypal.me/DGomes431?locale.x=pt_PT)`, true)
         .setFooter(`Pedido por: ${message.author.tag}`, message.author.displayAvatarURL({dynamic: true}))
 
             message.channel.send(embed)

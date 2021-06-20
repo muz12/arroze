@@ -1,10 +1,8 @@
 const mongoose = require("mongoose")
-const Schema = mongoose.Schema
 
-
-let userSchema = new Schema({
-    _id: {type: String},
+const userSchema = new mongoose.Schema({
+    id: { type: String, require: true },
 })
 
-const User = mongoose.model("Users", userSchema)
+const User = mongoose.model("users", userSchema)
 module.exports = User;

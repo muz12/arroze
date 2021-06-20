@@ -1,11 +1,21 @@
-const mongoose = require("mongoose")
-const Schema = mongoose.Schema
+const mongoose = require("mongoose");
 
+const guildSchema = new mongoose.Schema({
+    id: { type: String, required: true },
+    prefix: { type: String, default: "?" },
+    welcome: {
+        status: { type: Boolean, default: false },
+        channel: { type: String, default: "null" },
+        msg: { type: String, default: "null" },
+      },
+      byebye: {
+        status: { type: Boolean, default: false },
+        channel: { type: String, default: "null" },
+        msg: { type: String, default: "null" },
+      },
+    
+});
 
-let guildSchema = new Schema({
-    _id: {type: String, required: true },
-    prefix: {type: String, default: "?"},
-})
-
-let Guild = mongoose.model("Guilds", guildSchema )
+const Guild = mongoose.model("guilds", guildSchema );
 module.exports = Guild
+

@@ -48,7 +48,7 @@ module.exports.run = async (client, message, args) => {
 
     const device = Device(user)
     const joined = `${moment(userI.joinedAt).format("L")} ( ${moment((userI).joinedAt).startOf('day').fromNow()} )`
-    const created = `${moment(client.users.cache.get(user.id).createdAt.joinedAt).format("L")} ( ${moment(client.users.cache.get(user.id).createdAt).startOf('day').fromNow() } )`
+    const created = `${moment(client.users.cache.get(user.id).createdAt).format("L")} ( ${moment(client.users.cache.get(user.id).createdAt).startOf('day').fromNow() } )`
 
     const embed = new Discord.MessageEmbed()
     .setAuthor(user.user.username, user.user.displayAvatarURL({dynamic: true}))
