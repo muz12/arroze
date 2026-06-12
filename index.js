@@ -57,5 +57,5 @@ client.user
 .catch(console.log)
 })
 
-client.login(config.token);
+client.login(process.env.TOKEN || confing.token);
 
