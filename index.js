@@ -1,6 +1,6 @@
 const discord = require ('discord.js') //coneção com a livraria discord.js
 const client = new discord.Client() //criação de um novo cliente
-const config = require ("./config.json")
+const config = { token: process.env.TOKEN, prefix: "!" }
 const message = require ("./commands/client/events/message")
 const guild = require ("./commands/database/Schemas/Guild")
 const db = require ("./commands/database/index")
@@ -57,5 +57,5 @@ client.user
 .catch(console.log)
 })
 
-client.login(process.env.TOKEN || confing.token);
+client.login(config.token);
 
