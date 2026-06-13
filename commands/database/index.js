@@ -6,7 +6,7 @@ const logger = require ('../utils/logger')
 module.exports = {
     start(){
         try {
-            mongoose.connect('mongodb+srv://admin:admin@arroze.pdmqv.mongodb.net/Arroze?retryWrites=true&w=majority', {
+            mongoose.connect(process.env.MONGO_URI, {
                 useNewUrlParser: true,
                 useUnifiedTopology: true,
                 useFindAndModify: false
