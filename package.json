@@ -9,11 +9,15 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@distube/ytdl-core": "^4.16.12",
     "cpu-stat": "^2.0.1",
     "cpu-stats": "^1.0.0",
     "discord.js": "^12.5.2",
     "moment": "^2.29.1",
     "mongoose": "^5.12.3",
-    "os": "^0.1.1"
+    "opusscript": "^0.1.1",
+    "os": "^0.1.1",
+    "tweetnacl": "^1.0.3",
+    "yt-search": "^2.13.1"
   }
 }
